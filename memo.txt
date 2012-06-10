@@ -1,0 +1,8 @@
+How to calcurate P+Q?
+
+1.Draw the line through P and Q and find the third intersection point P*Q.
+2.Then I draw the line through P*Q and O, which is just the vertical line through P*Q.
+3.A cubic Curve in Weierstrass form is symmetric about the x axis, so fo find P+Q, we just take P*Q and reflect it about the x axis.
+
+How to define -Q?
+1.The negative point of Q is the reflected point; if Q=(x,y), then -Q=(x,-y)
