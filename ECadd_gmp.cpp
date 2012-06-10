@@ -94,7 +94,7 @@ int main(int argc,char **argv){
   Point P(1,2,1);
   Point Q(1,2,1);
   // Point P;
-  Point P2,P3,P4,P5;
+  Point P2,P3,P4,P5,P6,P7;
   Point R;
 
   std::cout << "Point P." << std::endl;
@@ -123,6 +123,16 @@ int main(int argc,char **argv){
   std::cout << "Addition of P and P4 into P5" <<std::endl;
   P5.ECadd(P4,P);
   P5.show();
+  std::cout << "\n";
+
+  std::cout << "Addition of P and P5 into P6" <<std::endl;
+  P6.ECadd(P5,P);
+  P6.show();
+  std::cout << "\n";
+
+  std::cout << "Addition of P and P6 into P7" <<std::endl;
+  P7.ECadd(P6,P);
+  P7.show();
   std::cout << "\n";
 
   return 0;
