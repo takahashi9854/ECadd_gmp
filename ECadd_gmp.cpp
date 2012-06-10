@@ -45,7 +45,7 @@ void Point::copy(Point P){
 
 // Showing coordinates of Point instance.
 void Point::show(){
-  std::cout << "(" << x << "," << y << "," << z <<")" << std::endl;
+  std::cout << "(" << x << ",\n" << y << ",\n" << z <<")\n" << std::endl;
   return;
 }
 
@@ -91,49 +91,64 @@ void Point::set(mpq_class X,mpq_class Y,mpq_class Z){
 }
 
 int main(int argc,char **argv){
-  Point P(1,2,1);
-  Point Q(1,2,1);
+  // Point P(1,2,1);
+  // Point Q(1,2,1);
   // Point P;
-  Point P2,P3,P4,P5,P6,P7;
-  Point R;
+  // Point P2,P3,P4,P5,P6,P7;
+  // Point R;
+  int length = 15;
+  Point *P = new Point[length];
+  Point tmp;
 
-  std::cout << "Point P." << std::endl;
-  P.show();
-  std::cout <<"\n";
+  int i;
+  P[0].set(1,2,1);
+  P[1].set(1,2,1);
+  for(i=1;i<length - 1;i++){
+    P[i+1].ECadd(P[i-1],P[i]);
+    std::cout << i+1 << "P" << std::endl;
+    P[i+1].show();
+  }
+  
+  
+  // std::cout << "Point P." << std::endl;
+  // P.show();
+  // std::cout <<"\n";
   
   // std::cout << "Point Q." << std::endl;
   // Q.show();
   // std::cout << "\n";
 
-  std::cout << "Addition of P and Q into P2." << std::endl;
-  P2.ECadd(P,Q);
-  P2.show();
-  std::cout << "\n";
+  // std::cout << "Addition of P and Q into P2." << std::endl;
+  // P2.ECadd(P,Q);
+  // P2.show();
+  // std::cout << "\n";
   
-  std::cout << "Addition of P and P2 into P3." << std::endl;
-  P3.ECadd(P,P2);
-  P3.show();
-  std::cout << "\n";
+  // std::cout << "Addition of P and P2 into P3." << std::endl;
+  // P3.ECadd(P,P2);
+  // P3.show();
+  // std::cout << "\n";
 
-  std::cout << "Addition of P and P3 into P4" <<std::endl;
-  P4.ECadd(P3,P);
-  P4.show();
-  std::cout << "\n";
+  // std::cout << "Addition of P and P3 into P4" <<std::endl;
+  // P4.ECadd(P3,P);
+  // P4.show();
+  // std::cout << "\n";
 
-  std::cout << "Addition of P and P4 into P5" <<std::endl;
-  P5.ECadd(P4,P);
-  P5.show();
-  std::cout << "\n";
+  // std::cout << "Addition of P and P4 into P5" <<std::endl;
+  // P5.ECadd(P4,P);
+  // P5.show();
+  // std::cout << "\n";
 
-  std::cout << "Addition of P and P5 into P6" <<std::endl;
-  P6.ECadd(P5,P);
-  P6.show();
-  std::cout << "\n";
+  // std::cout << "Addition of P and P5 into P6" <<std::endl;
+  // P6.ECadd(P5,P);
+  // P6.show();
+  // std::cout << "\n";
 
-  std::cout << "Addition of P and P6 into P7" <<std::endl;
-  P7.ECadd(P6,P);
-  P7.show();
-  std::cout << "\n";
+  // std::cout << "Addition of P and P6 into P7" <<std::endl;
+  // P7.ECadd(P6,P);
+  // P7.show();
+  // std::cout << "\n";
+
+  
 
   return 0;
 }
